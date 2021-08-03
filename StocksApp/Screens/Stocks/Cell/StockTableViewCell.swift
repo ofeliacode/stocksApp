@@ -51,6 +51,7 @@ class StockTableViewCell: UITableViewCell {
     
     lazy var mainStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [leftSideStack, rightSideStack])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 21
         return stackView
@@ -58,6 +59,7 @@ class StockTableViewCell: UITableViewCell {
     
     lazy var viewBg: UIView = {
         let myNewView = UIView()
+        myNewView.translatesAutoresizingMaskIntoConstraints = false
         myNewView.backgroundColor = #colorLiteral(red: 0.9423300028, green: 0.9574193358, blue: 0.9698819518, alpha: 1)
         myNewView.layer.cornerRadius = 15
         return myNewView
